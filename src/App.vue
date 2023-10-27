@@ -60,7 +60,7 @@ function result() {
               <div class="col text-center">
                 <select
                   class="text-center form-control rounded-4 pb-1.8 pt-1 align-middle fs-6 text-uppercase"
-                  @change="(event) => (state.filter = event.target.value)"
+                  @change="(event) => (state.operator = event.target.value)"
                 >
                   <option value="addition" id="addition">Adição +</option>
                   <option value="subtraction" id="subtraction">
