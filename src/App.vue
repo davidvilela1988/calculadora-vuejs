@@ -36,9 +36,9 @@ function result() {
 </script>
 
 <template>
-  <body class="">
+  <body>
     <div class="container">
-      <header class="p-5 mb-2 mt-4 text-center">
+      <header class="header p-5 mb-2 mt-4 text-center">
         <h1 class="text-light border border-secondary rounded-5 p-3">
           {{ title }}
         </h1>
@@ -57,7 +57,7 @@ function result() {
                   @keyup="(event) => (state.input1 = event.target.value)"
                 />
               </div>
-              <div class="col text-center">
+              <div class="col text-center select">
                 <select
                   class="text-center form-control rounded-4 pb-1.8 pt-1 align-middle fs-6 text-uppercase"
                   @change="(event) => (state.operator = event.target.value)"
@@ -83,7 +83,7 @@ function result() {
             </div>
             <div class="results row-2 text-center mt-5">
               <h4>O resultado da conta é:</h4>
-              <div class="number">
+              <div class="number mb-0">
                 {{ result() }}
               </div>
             </div>
@@ -131,5 +131,27 @@ i {
 
 footer {
   color: aliceblue;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    text-align: center;
+  }
+
+  .row {
+    display: block;
+    position: relative;
+  }
+
+  select {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: auto;
+  }
+  input {
+    margin-top: 10px;
+    width: auto;
+  }
 }
 </style>
